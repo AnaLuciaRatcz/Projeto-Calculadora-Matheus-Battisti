@@ -88,7 +88,6 @@ class Calcutator{
         current = null, 
         previous = null
     ){
-        console.log(operationValue, operation, current, previous);
 
        if(operationValue === null){
 
@@ -119,20 +118,20 @@ class Calcutator{
         this.previousOperationText.innerText.slice(0,-1) + operation;
     }
 
-    // delete the last digit
+    // delete the last digit (DEL)
 
     processDelOperator(){
         this.currentOperationText.innerText = 
         this.currentOperationText.innerText.slice(0, -1)
     }
 
-    // clear current operation
+    // clear current operation (CE)
 
     processClearCurrentOperation(){
         this.currentOperationText.innerText ="";
     }
 
-    // clear all operations
+    // clear all operations (C)
 
     processClearOperation(){
         this.currentOperationText.innerText ="";
@@ -140,7 +139,7 @@ class Calcutator{
     }
 
     // process an operation (=)
-    
+
     processEqualOperator(){
         const operation = previousOperationText.innerText.split(" ")[1];
 
